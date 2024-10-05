@@ -8,11 +8,11 @@ const dbgr = require("debug")("development:mongoose");
 mongoose
    .connect(`${config.get("MONGODB_URI")}/iztend`)
    .then(function () {
-   dbgr("connected");
-})
-.catch(function(err){
-   dbgr(err);
-})
+      dbgr("connected");
+   })
+   .catch(function(err){
+      dbgr(err);
+   })
 
 module.exports = mongoose.connection;
 
